@@ -1,0 +1,24 @@
+🛠️ Step-by-Step: Setting up the AI Agent in n8n
+Create a New Workflow in your n8n instance.
+
+Add a Webhook Node (or Chat Trigger):
+
+Set HTTP Method to POST.
+
+Set Path (e.g., ai-agent).
+
+This generates a Test/Production URL that you can call from any external app.
+
+Add the "AI Agent" Node:
+
+Search for Advanced AI -> AI Agent.
+
+Set the Agent Type to Conversational Agent.
+
+Connect the output of your Webhook node to the AI Agent input.
+
+Attach Model and Memory Nodes:
+
+Drag a connection from the AI Agent's model input pin to an OpenAI Chat Model node (or your preferred LLM provider). Add your API credentials.
+
+Drag a connection from the memory input pin to a Window Buffer Memory node to allow multi-turn conversations.
